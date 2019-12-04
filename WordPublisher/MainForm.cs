@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 
@@ -30,13 +23,27 @@ namespace WordPublisher
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                sFilePath = openFileDialog1.FileName;
-                tbxDirWord.Text = sFilePath;
 
                 var wordApp = new Word.Application();
-                wordApp.Visible = true;
+                wordApp.Visible = false;
 
-                var wordDocument = wordApp.Documents.Open(sFilePath);
+                try
+                {
+                    sFilePath = openFileDialog1.FileName;
+                    tbxDirWord.Text = sFilePath;
+
+                    var wordDocument = wordApp.Documents.Open(sFilePath);
+
+                    wordDocument.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Произошла ошибка!", "Attention!", MessageBoxButtons.OK);
+                }
+                finally
+                {
+                    wordApp.Quit();
+                }
             }
             else return;
         }
