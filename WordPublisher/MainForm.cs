@@ -21,17 +21,33 @@ namespace WordPublisher
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             tbxDirWord.ReadOnly = true;
             tbxDirPublisher.ReadOnly = true;
-            saveFileDialog.Filter = "Word File(*.doc)|*.doc|Publisher File(*.pub)|*.pub|All files(*.*)|*.*";
+            saveFileDialog.Filter = "Word File(*.docx)|*.docx|Publisher File(*.pub)|*.pub|All files(*.*)|*.*";
+            openFileDialog1.Filter = "Word File(*.docx)|*.docx|Publisher File(*.pub)|*.pub|All files(*.*)|*.*";
         }
 
         private void btnChooseDirWord_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                sFilePath = saveFileDialog.FileName;
-                tbxDirWord.Text = sFilePath;
+                sFilePath = openFileDialog1.FileName;
+                tbxDirPublisher.Text = sFilePath;
             }
             else return;
+        }
+
+        private void lblChooseDirPub_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                sFilePath = openFileDialog1.FileName;
+                tbxDirPublisher.Text = sFilePath;
+            }
+            else return;
+        }
+
+        private void btnTransText_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

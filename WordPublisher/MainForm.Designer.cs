@@ -36,20 +36,21 @@
             this.lblChooseDirPub = new System.Windows.Forms.Button();
             this.btnTransText = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // tbxDirWord
             // 
             this.tbxDirWord.Location = new System.Drawing.Point(12, 51);
             this.tbxDirWord.Name = "tbxDirWord";
-            this.tbxDirWord.Size = new System.Drawing.Size(174, 20);
+            this.tbxDirWord.Size = new System.Drawing.Size(233, 20);
             this.tbxDirWord.TabIndex = 0;
             // 
             // tbxDirPublisher
             // 
             this.tbxDirPublisher.Location = new System.Drawing.Point(12, 98);
             this.tbxDirPublisher.Name = "tbxDirPublisher";
-            this.tbxDirPublisher.Size = new System.Drawing.Size(174, 20);
+            this.tbxDirPublisher.Size = new System.Drawing.Size(233, 20);
             this.tbxDirPublisher.TabIndex = 1;
             // 
             // lblDirWord
@@ -72,7 +73,7 @@
             // 
             // btnChooseDirWord
             // 
-            this.btnChooseDirWord.Location = new System.Drawing.Point(193, 51);
+            this.btnChooseDirWord.Location = new System.Drawing.Point(251, 48);
             this.btnChooseDirWord.Name = "btnChooseDirWord";
             this.btnChooseDirWord.Size = new System.Drawing.Size(25, 23);
             this.btnChooseDirWord.TabIndex = 4;
@@ -82,12 +83,13 @@
             // 
             // lblChooseDirPub
             // 
-            this.lblChooseDirPub.Location = new System.Drawing.Point(192, 95);
+            this.lblChooseDirPub.Location = new System.Drawing.Point(251, 95);
             this.lblChooseDirPub.Name = "lblChooseDirPub";
             this.lblChooseDirPub.Size = new System.Drawing.Size(25, 23);
             this.lblChooseDirPub.TabIndex = 5;
             this.lblChooseDirPub.Text = "...";
             this.lblChooseDirPub.UseVisualStyleBackColor = true;
+            this.lblChooseDirPub.Click += new System.EventHandler(this.lblChooseDirPub_Click);
             // 
             // btnTransText
             // 
@@ -97,13 +99,18 @@
             this.btnTransText.TabIndex = 6;
             this.btnTransText.Text = "Перевести";
             this.btnTransText.UseVisualStyleBackColor = true;
+            this.btnTransText.Click += new System.EventHandler(this.btnTransText_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(231, 155);
+            this.ClientSize = new System.Drawing.Size(288, 155);
             this.Controls.Add(this.btnTransText);
             this.Controls.Add(this.lblChooseDirPub);
             this.Controls.Add(this.btnChooseDirWord);
@@ -129,6 +136,7 @@
         private System.Windows.Forms.Button lblChooseDirPub;
         private System.Windows.Forms.Button btnTransText;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
