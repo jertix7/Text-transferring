@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace WordPublisher
 {
@@ -30,7 +31,12 @@ namespace WordPublisher
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 sFilePath = openFileDialog1.FileName;
-                tbxDirPublisher.Text = sFilePath;
+                tbxDirWord.Text = sFilePath;
+
+                var wordApp = new Word.Application();
+                wordApp.Visible = true;
+
+                var wordDocument = wordApp.Documents.Open(sFilePath);
             }
             else return;
         }
