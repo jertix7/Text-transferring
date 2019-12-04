@@ -1,0 +1,9 @@
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\bin\Debug\WordPublisher.exe.config
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\bin\Debug\WordPublisher.exe
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\bin\Debug\WordPublisher.pdb
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\obj\Debug\WordPublisher.csprojAssemblyReference.cache
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\obj\Debug\WordPublisher.MainForm.resources
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\obj\Debug\WordPublisher.Properties.Resources.resources
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\obj\Debug\WordPublisher.csproj.GenerateResource.cache
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\obj\Debug\WordPublisher.exe
+C:\Users\Professional\source\repos\WordPublisher\WordPublisher\obj\Debug\WordPublisher.pdb

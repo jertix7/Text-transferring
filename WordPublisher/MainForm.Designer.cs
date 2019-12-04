@@ -35,6 +35,7 @@
             this.btnChooseDirWord = new System.Windows.Forms.Button();
             this.lblChooseDirPub = new System.Windows.Forms.Button();
             this.btnTransText = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // tbxDirWord
@@ -77,6 +78,7 @@
             this.btnChooseDirWord.TabIndex = 4;
             this.btnChooseDirWord.Text = "...";
             this.btnChooseDirWord.UseVisualStyleBackColor = true;
+            this.btnChooseDirWord.Click += new System.EventHandler(this.btnChooseDirWord_Click);
             // 
             // lblChooseDirPub
             // 
@@ -100,7 +102,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 155);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(231, 155);
             this.Controls.Add(this.btnTransText);
             this.Controls.Add(this.lblChooseDirPub);
             this.Controls.Add(this.btnChooseDirWord);
@@ -108,6 +111,7 @@
             this.Controls.Add(this.lblDirWord);
             this.Controls.Add(this.tbxDirPublisher);
             this.Controls.Add(this.tbxDirWord);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.Text = "Перевод текста из Word в Publisher";
             this.ResumeLayout(false);
@@ -124,6 +128,7 @@
         private System.Windows.Forms.Button btnChooseDirWord;
         private System.Windows.Forms.Button lblChooseDirPub;
         private System.Windows.Forms.Button btnTransText;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 
